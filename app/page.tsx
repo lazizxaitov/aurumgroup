@@ -173,6 +173,7 @@ const CONTENT = {
     esgBlocks: [
       {
         title: "Экологическая ответственность",
+        intro: "",
         points: [
           "разведка с минимальным вмешательством в природную среду",
           "мониторинг и защита водных ресурсов",
@@ -203,6 +204,7 @@ const CONTENT = {
           "системы внутреннего контроля качества",
           "прозрачность и ответственность перед партнёрами и инвесторами",
         ],
+        footer: "",
       },
     ],
     kinirTitle: "Проект «Кинир»: международная экспертиза",
@@ -324,6 +326,7 @@ const CONTENT = {
     esgBlocks: [
       {
         title: "Environmental Responsibility",
+        intro: "",
         points: [
           "exploration with minimal environmental disturbance",
           "monitoring and protection of water resources",
@@ -354,6 +357,7 @@ const CONTENT = {
           "internal quality control systems",
           "transparency and accountability to partners and investors",
         ],
+        footer: "",
       },
     ],
     kinirTitle: "Kinir Project: International Expertise",
@@ -475,6 +479,7 @@ const CONTENT = {
     esgBlocks: [
       {
         title: "Ekologik mas’uliyat",
+        intro: "",
         points: [
           "tabiatga minimal aralashuv bilan razvedka",
           "suv resurslarini monitoring qilish va himoya qilish",
@@ -505,6 +510,7 @@ const CONTENT = {
           "ichki sifat nazorati tizimlari",
           "hamkorlar va investorlar oldida shaffoflik va javobgarlik",
         ],
+        footer: "",
       },
     ],
     kinirTitle: "«Kinir» loyihasi: xalqaro ekspertiza",
