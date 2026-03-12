@@ -127,6 +127,7 @@ h4 {
     radial-gradient(220px 120px at 100% 0%, rgba(205, 168, 100, 0.14), transparent 65%);
 }
 
+
 .fade-in-up {
   animation: fadeInUp 0.55s ease-out;
 }
@@ -185,6 +186,7 @@ h4 {
     transform: translateY(0);
   }
 }
+
 
 @media (max-width: 900px) {
   .corp-grid {

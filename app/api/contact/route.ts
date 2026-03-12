@@ -5,7 +5,6 @@ type ContactPayload = {
   fullName: string;
   phone: string;
   email: string;
-  position: string;
   message: string;
   language: "ru" | "en" | "uz";
 };
@@ -14,7 +13,6 @@ function validate(payload: ContactPayload) {
   if (!payload.fullName.trim()) return "Full name is required";
   if (!payload.phone.trim()) return "Phone is required";
   if (!payload.email.trim()) return "Email is required";
-  if (!payload.position.trim()) return "Position is required";
   if (!payload.message.trim()) return "Message is required";
   return null;
 }
@@ -54,7 +52,6 @@ export async function POST(req: Request) {
       `Full name: ${data.fullName}`,
       `Phone: ${data.phone}`,
       `Email: ${data.email}`,
-      `Position: ${data.position}`,
       `Language: ${data.language}`,
       "",
       "Message:",
@@ -94,7 +91,6 @@ export async function POST(req: Request) {
           `Full name: ${data.fullName}`,
           `Phone: ${data.phone}`,
           `Email: ${data.email}`,
-          `Position: ${data.position}`,
           `Language: ${data.language}`,
           "",
           "Message:",
