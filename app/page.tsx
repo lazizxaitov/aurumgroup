@@ -8,6 +8,7 @@ type FormState = { fullName: string; phone: string; email: string; message: stri
 
 const CONTACTS = {
   email: "info@aurumgroup.uz",
+  hrEmail: "hr@aurumgroup.uz",
   linkedin: "https://www.linkedin.com/company/aurum-global-group",
   address: {
     ru: "Республика Узбекистан, Навоийская обл., Томдинский р-н, ул. Геологов, д. 123-а",
@@ -150,9 +151,9 @@ const CONTENT = {
     explorationFooter:
       "Для повышения точности геологических моделей компания сотрудничает с ведущими международными экспертами в области геологии золоторудных месторождений.",
     experts: [
-      { name: "Павел Мухин", role: "региональный геолог с большим опытом работы в Центральной Азии", image: "/placeholders/processing.jpg" },
-      { name: "д-р Ричард Голдфарб", role: "мировой эксперт по формированию золоторудных систем", image: "/placeholders/processing.jpg" },
-      { name: "Марк Гуссенс", role: "геофизическое картирование, исследования дистанционного зондирования", image: "/placeholders/processing.jpg" },
+      { name: "Павел Мухин", role: "региональный геолог с большим опытом работы в Центральной Азии", image: "/media/experts/pavel-mukhin.jpg" },
+      { name: "д-р Ричард Голдфарб", role: "мировой эксперт по формированию золоторудных систем", image: "/media/experts/richard-goldfarb.jpg" },
+      { name: "Марк Гуссенс", role: "геофизическое картирование, исследования дистанционного зондирования", image: "/media/experts/mark-gussens.jpg" },
     ],
     esgTitle: "ESG",
     esgKey: "ESG",
@@ -303,9 +304,9 @@ const CONTENT = {
     explorationFooter:
       "To improve geological model accuracy, the company collaborates with leading international experts in gold deposit geology.",
     experts: [
-      { name: "Pavel Mukhin", role: "Regional geologist with extensive experience in Central Asia", image: "/placeholders/processing.jpg" },
-      { name: "Dr. Richard Goldfarb", role: "World‑renowned expert in gold system formation", image: "/placeholders/processing.jpg" },
-      { name: "Marc Gussens", role: "Geophysical mapping, remote sensing studies", image: "/placeholders/processing.jpg" },
+      { name: "Pavel Mukhin", role: "Regional geologist with extensive experience in Central Asia", image: "/media/experts/pavel-mukhin.jpg" },
+      { name: "Dr. Richard Goldfarb", role: "World‑renowned expert in gold system formation", image: "/media/experts/richard-goldfarb.jpg" },
+      { name: "Marc Gussens", role: "Geophysical mapping, remote sensing studies", image: "/media/experts/mark-gussens.jpg" },
     ],
     esgTitle: "ESG",
     esgKey: "ESG",
@@ -456,9 +457,9 @@ const CONTENT = {
     explorationFooter:
       "Geologik modellar aniqligini oshirish uchun kompaniya oltin konlari geologiyasi bo‘yicha yetakchi xalqaro ekspertlar bilan hamkorlik qiladi.",
     experts: [
-      { name: "Pavel Mukhin", role: "Markaziy Osiyoda katta tajribaga ega mintaqaviy geolog", image: "/placeholders/processing.jpg" },
-      { name: "Dr. Richard Goldfarb", role: "oltin tizimlari shakllanishi bo‘yicha jahon eksperti", image: "/placeholders/processing.jpg" },
-      { name: "Marc Gussens", role: "geofizik xaritalash va masofaviy zondlash tadqiqotlari", image: "/placeholders/processing.jpg" },
+      { name: "Pavel Mukhin", role: "Markaziy Osiyoda katta tajribaga ega mintaqaviy geolog", image: "/media/experts/pavel-mukhin.jpg" },
+      { name: "Dr. Richard Goldfarb", role: "oltin tizimlari shakllanishi bo‘yicha jahon eksperti", image: "/media/experts/richard-goldfarb.jpg" },
+      { name: "Marc Gussens", role: "geofizik xaritalash va masofaviy zondlash tadqiqotlari", image: "/media/experts/mark-gussens.jpg" },
     ],
     esgTitle: "ESG",
     esgKey: "ESG",
@@ -664,7 +665,7 @@ export default function Home() {
 
         <section id="kinir" className="container-grid pt-3 pb-8 md:pt-4 md:pb-10"><article className="modern-card rounded-[28px] p-8 md:p-10"><h2 className="section-title font-semibold">{content.kinirTitle}</h2><div className="mt-6"><article className="modern-card rounded-[20px] p-6"><h3 className="text-2xl font-semibold">{content.kinirTechTitle}</h3><p className="mt-3 text-sm text-[#2e3643] md:text-base">{content.kinirTechIntro}</p><p className="mt-3 text-sm text-[#2e3643] md:text-base">{content.kinirTechUse}</p><ul className="mt-3 space-y-2 text-sm text-[#2e3643] md:text-base">{content.kinirTechPoints.map((p) => <li key={p}>• {p}</li>)}</ul><p className="mt-3 text-sm text-[#2e3643] md:text-base">{content.kinirTechFooter}</p></article></div></article></section>
 
-        <section id="hr" className="container-grid pt-3 pb-8 md:pt-4 md:pb-10"><div className="grid gap-8 md:grid-cols-[0.95fr_1.05fr]"><article className="modern-card rounded-[24px] p-7 md:p-9"><h2 className="section-title font-semibold">{t.hr}</h2><p className="mt-4 max-w-2xl text-lg text-[#2e3643] md:text-xl">{lang === "ru" ? "Оставьте анкету для подбора персонала." : lang === "en" ? "Submit your profile for recruitment." : "Xodimlar tanlovi uchun anketa qoldiring."}</p><p className="mt-4 max-w-2xl text-base text-[#2e3643] md:text-lg">{lang === "ru" ? "Для подробной информации можете обратиться по почте:" : lang === "en" ? "For detailed information, please contact us by email:" : "Batafsil ma'lumot uchun elektron pochta orqali murojaat qiling:"} <a href={`mailto:${CONTACTS.email}`} className="font-semibold text-[var(--accent-strong)]">{CONTACTS.email}</a></p></article><article className="modern-card rounded-[24px] p-7 md:p-9"><h3 className="text-2xl font-semibold">{t.form}</h3><form className="mt-5 grid gap-3" onSubmit={submitForm}><input className="rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm" placeholder={t.fullName} value={form.fullName} onChange={(e) => setForm((p) => ({ ...p, fullName: e.target.value }))} /><input className="rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm" placeholder={t.phone} value={form.phone} onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))} /><input className="rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm" placeholder={t.email} type="email" value={form.email} onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))} /><textarea className="min-h-28 rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm" placeholder={t.message} value={form.message} onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))} /><button type="submit" disabled={submitting} className="rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-white disabled:opacity-60">{submitting ? t.sending : t.submit}</button>{submitState === "success" ? <p className="text-sm text-green-700">{t.sent}</p> : null}{submitState === "error" ? <p className="text-sm text-red-700">{t.error}</p> : null}</form></article></div></section>
+        <section id="hr" className="container-grid pt-3 pb-8 md:pt-4 md:pb-10"><div className="grid gap-8 md:grid-cols-[0.95fr_1.05fr]"><article className="modern-card rounded-[24px] p-7 md:p-9"><h2 className="section-title font-semibold">{t.hr}</h2><p className="mt-4 max-w-2xl text-lg text-[#2e3643] md:text-xl">{lang === "ru" ? "Оставьте анкету для подбора персонала." : lang === "en" ? "Submit your profile for recruitment." : "Xodimlar tanlovi uchun anketa qoldiring."}</p><p className="mt-4 max-w-2xl text-base text-[#2e3643] md:text-lg">{lang === "ru" ? "Для подробной информации можете обратиться по почте:" : lang === "en" ? "For detailed information, please contact us by email:" : "Batafsil ma'lumot uchun elektron pochta orqali murojaat qiling:"} <a href={`mailto:${CONTACTS.hrEmail}`} className="font-semibold text-[var(--accent-strong)]">{CONTACTS.hrEmail}</a></p></article><article className="modern-card rounded-[24px] p-7 md:p-9"><h3 className="text-2xl font-semibold">{t.form}</h3><form className="mt-5 grid gap-3" onSubmit={submitForm}><input className="rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm" placeholder={t.fullName} value={form.fullName} onChange={(e) => setForm((p) => ({ ...p, fullName: e.target.value }))} /><input className="rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm" placeholder={t.phone} value={form.phone} onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))} /><input className="rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm" placeholder={t.email} type="email" value={form.email} onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))} /><textarea className="min-h-28 rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm" placeholder={t.message} value={form.message} onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))} /><button type="submit" disabled={submitting} className="rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-white disabled:opacity-60">{submitting ? t.sending : t.submit}</button>{submitState === "success" ? <p className="text-sm text-green-700">{t.sent}</p> : null}{submitState === "error" ? <p className="text-sm text-red-700">{t.error}</p> : null}</form></article></div></section>
 
         <section id="contacts" className="container-grid pt-3 pb-8 md:pt-4 md:pb-10"><article className="modern-card rounded-[24px] p-7 md:p-9"><h2 className="section-title font-semibold">{t.contacts}</h2><div className="mt-5 grid gap-3 text-base text-[#2e3643] md:grid-cols-2"><p><strong>{t.email}:</strong> <a href={`mailto:${CONTACTS.email}`} className="text-[var(--accent-strong)]">{CONTACTS.email}</a></p><p><strong>LinkedIn:</strong> <a href={CONTACTS.linkedin} target="_blank" rel="noreferrer" className="text-[var(--accent-strong)]">Aurum Global Group</a></p><p><strong>{lang === "ru" ? "Адрес" : lang === "en" ? "Address" : "Manzil"}:</strong> {CONTACTS.address[lang]}</p></div></article></section>
       </main>
