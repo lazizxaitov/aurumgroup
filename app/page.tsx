@@ -152,7 +152,7 @@ const CONTENT = {
       "Для повышения точности геологических моделей компания сотрудничает с ведущими международными экспертами в области геологии золоторудных месторождений.",
     experts: [
       { name: "Павел Мухин", role: "региональный геолог с большим опытом работы в Центральной Азии", image: "/media/experts/pavel-mukhin.jpg" },
-      { name: "д-р Ричард Голдфарб", role: "мировой эксперт по формированию золоторудных систем", image: "/media/experts/richard-goldfarb.jpg" },
+      { name: "д-р Ричард Голдфарб", role: "мировой эксперт по формированию золоторудных систем", image: "/media/experts/richard-goldfarb1.jpg" },
       { name: "Марк Гуссенс", role: "геофизическое картирование, исследования дистанционного зондирования", image: "/media/experts/mark-gussens.jpg" },
     ],
     esgTitle: "ESG",
@@ -305,7 +305,7 @@ const CONTENT = {
       "To improve geological model accuracy, the company collaborates with leading international experts in gold deposit geology.",
     experts: [
       { name: "Pavel Mukhin", role: "Regional geologist with extensive experience in Central Asia", image: "/media/experts/pavel-mukhin.jpg" },
-      { name: "Dr. Richard Goldfarb", role: "World‑renowned expert in gold system formation", image: "/media/experts/richard-goldfarb.jpg" },
+      { name: "Dr. Richard Goldfarb", role: "World‑renowned expert in gold system formation", image: "/media/experts/richard-goldfarb1.jpg" },
       { name: "Marc Gussens", role: "Geophysical mapping, remote sensing studies", image: "/media/experts/mark-gussens.jpg" },
     ],
     esgTitle: "ESG",
@@ -458,7 +458,7 @@ const CONTENT = {
       "Geologik modellar aniqligini oshirish uchun kompaniya oltin konlari geologiyasi bo‘yicha yetakchi xalqaro ekspertlar bilan hamkorlik qiladi.",
     experts: [
       { name: "Pavel Mukhin", role: "Markaziy Osiyoda katta tajribaga ega mintaqaviy geolog", image: "/media/experts/pavel-mukhin.jpg" },
-      { name: "Dr. Richard Goldfarb", role: "oltin tizimlari shakllanishi bo‘yicha jahon eksperti", image: "/media/experts/richard-goldfarb.jpg" },
+      { name: "Dr. Richard Goldfarb", role: "oltin tizimlari shakllanishi bo‘yicha jahon eksperti", image: "/media/experts/richard-goldfarb1.jpg" },
       { name: "Marc Gussens", role: "geofizik xaritalash va masofaviy zondlash tadqiqotlari", image: "/media/experts/mark-gussens.jpg" },
     ],
     esgTitle: "ESG",
@@ -631,7 +631,7 @@ export default function Home() {
 
         <section id="exploration" className="container-grid pt-3 pb-8 md:pt-4 md:pb-10"><h2 className="section-title font-semibold">{content.explorationTitle}</h2><p className="mt-4 max-w-4xl text-base text-[#2e3643]">{content.explorationIntro}</p><div className="mt-6 grid gap-5 md:grid-cols-3">{content.exploration.map((item) => <article key={item.title} className="modern-card rounded-[20px] p-6"><h3 className="text-xl font-semibold">{item.title}</h3><ul className="mt-3 space-y-2 text-sm text-[#2e3643]">{item.points.map((p) => <li key={p}>• {p}</li>)}</ul></article>)}</div><p className="mt-5 max-w-4xl text-base text-[#2e3643]">{content.explorationFooter}</p></section>
 
-        <section id="experts" className="container-grid pt-3 pb-8 md:pt-4 md:pb-10"><h2 className="section-title font-semibold">{t.experts}</h2><div className="mt-7 grid gap-5 md:grid-cols-3">{content.experts.map((e) => <article key={e.name} className="modern-card overflow-hidden rounded-[20px]"><Image src={e.image} alt={e.name} width={900} height={650} className="h-48 w-full object-cover" /><div className="p-5"><h3 className="text-xl font-semibold">{e.name}</h3><p className="mt-1 text-sm text-[#566078]">{e.role}</p></div></article>)}</div></section>
+        <section id="experts" className="container-grid pt-3 pb-8 md:pt-4 md:pb-10"><h2 className="section-title font-semibold">{t.experts}</h2><div className="mt-7 grid gap-5 md:grid-cols-3">{content.experts.map((e) => <article key={e.name} className="modern-card overflow-hidden rounded-[20px]"><div className="h-48 overflow-hidden"><Image src={e.image} alt={e.name} width={900} height={650} className="h-full w-full origin-center object-cover scale-[1.55]" /></div><div className="p-5"><h3 className="text-xl font-semibold">{e.name}</h3><p className="mt-1 text-sm text-[#566078]">{e.role}</p></div></article>)}</div></section>
 
         <section id="esg" className="container-grid pt-3 pb-8 md:pt-4 md:pb-10">
           <div className="grid gap-8">
